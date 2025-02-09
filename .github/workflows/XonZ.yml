@@ -2,7 +2,7 @@ name: XonZ
 
 on:
   schedule:
-    - cron: '0 0 * * *'
+    - cron: '0 0 * * *' # Berjalan pada pukul 00:00 UTC setiap hari
   push:
     branches:
       - main
@@ -22,3 +22,5 @@ jobs:
         git add date.txt
         git commit -m "Automated commit for $(date -u)"
         git push
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
