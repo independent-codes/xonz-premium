@@ -2,7 +2,7 @@ name: XonZ
 
 on:
   schedule:
-    - cron: '0 0 * * *' # Berjalan pada pukul 00:00 UTC setiap hari
+    - cron: '0 0 * * *'
   push:
     branches:
       - main
